@@ -5,7 +5,7 @@ class ImcController {
   final weight = TextEditingController();
   final height = TextEditingController();
 
-  final _imcModel = ImcModel();
+  final _imcModel = ImcModel.empty();
 
   String calculateImc() {
     return _imcModel.calculateImc(

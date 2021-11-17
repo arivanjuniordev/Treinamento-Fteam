@@ -1,19 +1,20 @@
 class ImcModel {
-  // obs poderia ser uma classe static, por que seria uma classe
-  // de auxilio com uma função de calcular.
+  final double weight;
+  final double height;
 
-  String calculateImc({
-    required double weight,
-    required double height,
-  }) {
+  ImcModel({required this.weight, required this.height});
+
+  factory ImcModel.empty() => ImcModel(weight: 0.0, height: 0.0);
+
+  String calculateImc({required double weight, required double height}) {
     double result = weight / (height * height);
 
     if (result < 17) {
       return 'Muito abaixo do peso';
     } else if (result >= 17 && result <= 18.49) {
-      return 'Abaixo do peso';
+      return 'Normal';
     } else if (result >= 18.5 && result <= 24.99) {
-      return 'Peso normal';
+      return 'Sobrepeso';
     } else if (result >= 25 && result <= 29.99) {
       return 'Acima do peso';
     } else if (result >= 30 && result <= 34.99) {
