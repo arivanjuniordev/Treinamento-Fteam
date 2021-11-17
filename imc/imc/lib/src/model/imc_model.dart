@@ -4,8 +4,6 @@ class ImcModel {
 
   ImcModel({required this.weight, required this.height});
 
-  factory ImcModel.empty() => ImcModel(weight: 0.0, height: 0.0);
-
   String calculateImc({required double weight, required double height}) {
     double result = weight / (height * height);
 
