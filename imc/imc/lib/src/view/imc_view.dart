@@ -11,8 +11,6 @@ class ImcView extends StatefulWidget {
 class _ImcViewState extends State<ImcView> {
   final controller = ImcController();
 
-  String result = 'Digite para Calucar o IMC!';
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,11 +29,11 @@ class _ImcViewState extends State<ImcView> {
             TextField(
               controller: controller.height,
             ),
-            Text(result),
+            Text(controller.result),
             ElevatedButton(
               onPressed: () {
                 setState(() {
-                  result = controller.calculateImc();
+                  controller.result = controller.calculateImc();
                 });
               },
               child: const Text('Calcular'),

@@ -1,6 +1,10 @@
 class CpfModel {
   static const stripRegex = r'[^\d]';
 
+  CpfModel({required this.cpf});
+
+  final String cpf;
+
   int _verifierDigit(String cpf) {
     List<int> numbers =
         cpf.split("").map((number) => int.parse(number, radix: 10)).toList();

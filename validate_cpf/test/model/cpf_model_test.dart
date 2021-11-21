@@ -3,7 +3,7 @@ import 'package:validate_cpf/model/cpf_model.dart';
 
 void main() {
   test('Validate CPF', () {
-    final validateCpf = CpfModel();
+    final validateCpf = CpfModel(cpf: '0');
 
     bool validate = validateCpf.isValid('08723809477');
 
@@ -11,7 +11,7 @@ void main() {
   });
 
   test('Invalidate CPF', () {
-    final validateCpf = CpfModel();
+    final validateCpf = CpfModel(cpf: '0');
 
     bool validate = validateCpf.isValid('08723809474');
 

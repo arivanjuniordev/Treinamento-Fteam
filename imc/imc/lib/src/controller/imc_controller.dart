@@ -4,13 +4,14 @@ import 'package:imc/src/model/imc_model.dart';
 class ImcController {
   final weight = TextEditingController();
   final height = TextEditingController();
-
-  final _imcModel = ImcModel(weight: 0, height: 0);
+  String result = 'Digite para Calucar o IMC!';
 
   String calculateImc() {
-    return _imcModel.calculateImc(
+    final _imcModel = ImcModel(
       weight: double.parse(weight.text),
       height: double.parse(height.text),
     );
+
+    return _imcModel.calculateImc();
   }
 }
