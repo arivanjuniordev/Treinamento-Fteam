@@ -13,7 +13,7 @@ void main() {
   test('Invalidate CPF', () {
     final validateCpf = CpfModel(cpf: '0');
 
-    bool validate = validateCpf.isValid('08723809474');
+    bool validate = validateCpf.isValid('0');
 
     expect(validate, false);
   });

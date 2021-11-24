@@ -1,9 +1,9 @@
 class CpfModel {
   static const stripRegex = r'[^\d]';
 
-  CpfModel({required this.cpf});
-
   final String cpf;
+
+  CpfModel({required this.cpf});
 
   int _verifierDigit(String cpf) {
     List<int> numbers =
