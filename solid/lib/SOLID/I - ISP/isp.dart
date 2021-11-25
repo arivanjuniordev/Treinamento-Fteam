@@ -12,18 +12,18 @@ abstract class IPayment {
   String pay();
 }
 
-abstract class IPaymentPix {
-  String payPix();
+abstract class IPaymentJuros {
+  String payJuros();
 }
 
-class PaymentPix implements IPayment, IPaymentPix {
+class PaymentPix implements IPayment, IPaymentJuros {
   @override
   String pay() {
     return 'Pagando com o pix';
   }
 
   @override
-  String payPix() {
+  String payJuros() {
     return 'pagando juros';
   }
 }
