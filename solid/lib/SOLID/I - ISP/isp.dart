@@ -3,7 +3,7 @@ I - é o quarto princípio
 ISP - Interface Segregation Principle
 Tradução - Princípio da segregação de Interface
 
-"muitas interfaces de clientes específicas, são melhores do que uma 
+"muitas interfaces específicas, são melhores do que uma 
 para todos propósitos."
 
 */

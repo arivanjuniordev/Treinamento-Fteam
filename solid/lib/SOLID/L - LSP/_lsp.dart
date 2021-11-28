@@ -16,6 +16,7 @@ abstract class Payment {
 
   String pay({required double value});
   String payPix({required double value});
+  String payBoleto({required double value});
 }
 
 class PaymentPix extends Payment {
@@ -23,11 +24,16 @@ class PaymentPix extends Payment {
 
   @override
   String pay({required double value}) {
-    return 'Pagando com o pix $valor';
+    return 'Pagando  $valor';
   }
 
   @override
   String payPix({required double value}) {
-    throw Exception('Pix não pode fazer');
+    return 'Pagando com o pix $valor';
+  }
+
+  @override
+  String payBoleto({required double value}) {
+    throw Exception('Pix não pode pagar boleto');
   }
 }

@@ -28,3 +28,15 @@ class PaymentPix extends Payment {
     return 'Pagando pix';
   }
 }
+
+class Payment2 extends Payment {
+  Payment2({required double valor}) : super(valor: 20);
+  @override
+  String pay({required double value}) {
+    return 'pay1';
+  }
+
+  String pay2({required double value}) {
+    return 'pay2';
+  }
+}

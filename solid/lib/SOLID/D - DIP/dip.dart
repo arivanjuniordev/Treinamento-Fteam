@@ -31,3 +31,8 @@ void main(List<String> args) {
   // ignore: unused_local_variable
   IPayment paymentPix = PaymentPix();
 }
+
+void main2(List<String> args) {
+  // ignore: unused_local_variable
+  PaymentPix paymentPix = PaymentPix();
+}

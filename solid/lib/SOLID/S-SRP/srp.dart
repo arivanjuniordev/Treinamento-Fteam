@@ -17,3 +17,19 @@ class Payment {
     print('pay');
   }
 }
+
+class Payment2 {
+  late final double valor;
+
+  Payment2({required double valor});
+
+  pay({required double value}) {
+    // ignore: avoid_print
+    print('pay');
+  }
+
+  saveBanco() {
+    // ignore: avoid_print
+    print('salando');
+  }
+}
